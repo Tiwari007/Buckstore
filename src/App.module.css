@@ -1,0 +1,23 @@
+.loading__container{
+    height: 100vh;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.product{
+    height: 100vh !important;
+}
+
+.order__placed{
+    height: 90vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
