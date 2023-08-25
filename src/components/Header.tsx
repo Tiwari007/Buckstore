@@ -40,7 +40,15 @@ const Header = () => {
   const [local, setLocal] = useState<TCart[]>()
 
   useEffect(() => {
-    const carts: TCart[] = JSON.parse(localStorage.getItem("cart")) || [];
+    let carts: TCart[];
+
+    let tempValue = localStorage.getItem('cart')
+    if(tempValue){
+      carts = JSON.parse(tempValue) 
+    }
+    else{
+      carts = []
+    }
     setLocal(carts)
   }, []);
 

@@ -1,4 +1,4 @@
-import { Link, useLinkClickHandler, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type TProducts = {
   id: number;

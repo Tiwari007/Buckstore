@@ -42,7 +42,18 @@ const Product = () => {
       navigate('/cart')
     }
 
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+
+
+    let cart;
+
+    let tempValue = localStorage.getItem('cart')
+    if(tempValue){
+      cart = JSON.parse(tempValue) 
+    }
+    else{
+      cart = []
+    }
     const isProductExist = cart.find((item: { id: any; }) => item.id === product.id)
     if (isProductExist) {
       const updatedCart = cart.map((item: { id: any; quantity: number; }) => {

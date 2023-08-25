@@ -20,9 +20,17 @@ type TCart = {
 const Cart = () => {
   const navigate = useNavigate();
   const [total, setTotal] = useState(0);
-  const [deliveryCharge, setDeliveryCharge] = useState<number | undefined>(2)
+  const [deliveryCharge, setDeliveryCharge] = useState<any>(2)
   const [isLoading, setIsLoading] = useState(false)
-  const carts: TCart[] = JSON.parse(localStorage.getItem("cart")) || [];
+  let carts: TCart[];
+
+    let tempValue = localStorage.getItem('cart')
+    if(tempValue){
+      carts = JSON.parse(tempValue) 
+    }
+    else{
+      carts = []
+    }
 
   useEffect(() => {
     const total = carts.reduce((acc, item) => {

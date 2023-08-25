@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import classes from "./App.module.css";
-import Footer from "./Footer";
-import Header from "./Header";
-import Banner from "./Banner";
-import Dashboard from "./Products";
-import Testimonial from "./Testimonial";
 import Loading from "./Loading";
 import Products from "./Products";
-import { json } from "react-router-dom";
 
 type TProducts = {
     id: number;
